@@ -8,7 +8,7 @@ ppl-assignment-ps1509 created by GitHub Classroom
 <h3><u>Build System</u> :</h3><p>
 Operating System : Windows 10 <p>
 OS Type : 64 bit<p>
-<h6><u>Note</u> :</h6> All codes submitted are build and tested on Netbeans IDE 8.0.1<p>
+<h6>Note :</h6> All codes submitted are build and tested on Netbeans IDE 8.0.1<p>
 <hr>
 <h3><u>Command for command prompt in Windows</u> :</h3>
 If text files provided with the program are used,go to the path "Ques1->build->classes" :<p>
