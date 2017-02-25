@@ -5,7 +5,7 @@ ppl-assignment-ps1509 created by GitHub Classroom
 <h1>PUJA KUMARI (LIT2015017)</h1>
 <hr>
 
-<u>Build System</u> :</h3>
+<h3><u>Build System</u> :</h3><p>
 Operating System : Windows 10 <p>
 OS Type : 64 bit<p>
 <h6><u>Note</u> :</h6> All codes submitted are build and tested on Netbeans IDE 8.0.1<p>
