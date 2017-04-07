@@ -20,7 +20,6 @@ public class input {
     int gs,bs,es,us,ls,ch;
     /**
      * Constructor function which initializes the girl,boy and the gift list
-     * @param args Command line argument to accept file names and value of k
      * @param g List of girls
      * @param b List of boys
      * @param u List of utility gifts
@@ -31,12 +30,26 @@ public class input {
      * @throws IOException Gives IO Exception on wrong arguments
      */
     
-    public input(String args[],girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[]) throws IOException{
-        FileInputStream girl = new FileInputStream(args[1]);
-        FileInputStream boy = new FileInputStream(args[0]);
-        FileInputStream utility_gift = new FileInputStream(args[4]);
-        FileInputStream luxury_gift = new FileInputStream(args[3]);
-        FileInputStream essential_gift = new FileInputStream(args[2]);
+    /**
+     * Constructor function which initializes the girl,boy and the gift list
+     * @param g List of girls
+     * @param b List of boys
+     * @param u List of utility gifts
+     * @param l List of luxury gifts
+     * @param e List of essential gifts
+     * @param commit Array to store the mapping of committed boys and girls
+     * @param c List of couples made
+     * @param gf1 class of gift selector 1
+     * @param gf2 class of gift selector 2
+     * @param gf Class for generic gift selector
+     * @throws IOException Gives IO Exception on wrong arguments
+     */
+    public input(girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[],giftselector1 gf1,giftselector2 gf2,giftselect gf) throws IOException{
+        FileInputStream girl = new FileInputStream("girl.txt");
+        FileInputStream boy = new FileInputStream("boy.txt");
+        FileInputStream utility_gift = new FileInputStream("utility.txt");
+        FileInputStream luxury_gift = new FileInputStream("luxury.txt");
+        FileInputStream essential_gift = new FileInputStream("essential.txt");
         Scanner s =new Scanner(girl);
         Scanner s2 =new Scanner(boy);
         Scanner s3 = new Scanner(essential_gift);
@@ -105,13 +118,7 @@ public class input {
         }
         
        for(int i=0;i< bs;i++) {
-           if(ch==1){
-               b[i].gifting1(g, l, e, ls, es, gs);
-           }
-           else {
-               b[i].gifting2(g, l, e, u, ls, es, us, gs);
-           }
-            
+               b[i].gifting1(g, l, e,u, ls, es,us, gs, ch,gf1,gf2,gf);    
        }
        
        for(int i=0;i<500;i++) {

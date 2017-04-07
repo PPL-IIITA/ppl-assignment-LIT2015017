@@ -41,157 +41,25 @@ public class boys {
      * @param g List of all girls
      * @param l List of luxury gifts
      * @param e List of essential gifts
+     * @param u List of utility gifts
      * @param l1 No. of luxury gifts
      * @param e1 No. of essential gifts
+     * @param u1 No. of utility gifts
      * @param n Total no. of girls
+     * @param ch Choice of method of gift selection
+     * @param gf1 Gift selector 1
+     * @param gf2 Gift selector 2
+     * @param gf Parent gift selector
      */
-    public void gifting1(girls g[] ,luxury_gifts l[], essential_gift e[],int l1, int e1,int n) {
-        int j,k;
-        if(status==2){
-            for(int i=0;i<n;i++) {
-                if(g[i].partner == name) {
-                    partner = i;
-                }
-            }
-            int balance;
-            if(criteria == 1) {
-                j=0; k=0;
-                balance = g[partner].maintainance_cost;
-                while(balance>0 && j<e1){
-                    g[partner].cost+=e[j].price;
-                    g[partner].value+=e[j].value;
-                    balance = balance-e[j].price;
-                    
-                    j++;
-                    if(j==e1 && g[partner].cost < g[partner].maintainance_cost) {
-                        g[partner].cost+=l[k].price;
-                        g[partner].value+=2*l[k].value;
-                        balance = balance-l[k].price;
-                        k++;
-                    }   
-                }
-                happiness=balance;
-            }
-            else if (criteria == 2) {
-                j=l1-1;
-                k=e1-1;
-                balance = budget;
-                while(balance>=0 && j>=0){
-                    if(balance - l[j].price > 0 ) {
-                        g[partner].cost+=l[j].price;
-                        g[partner].value+=2*l[j].value;
-                        balance = balance-l[j].price;
-                        j--;
-                    }
-                    if(j==-1 && balance - e[k].price > 0) {
-                        g[partner].cost+=e[k].price;
-                        g[partner].value+=e[k].value;
-                        balance = balance-e[k].price;
-                        k--;
-                    }   
-                }
-                happiness=find_happiness(g[partner]);
-            }
-            else if(criteria == 3){
-                j=0; k=0;
-                balance = g[partner].maintainance_cost;
-                while(balance>0 && j<e1){
-                    g[partner].cost+=e[j].price;
-                    g[partner].value+=e[j].value;
-                    balance = balance-e[j].price;
-                    j++;     
-                }
-                if(balance > 0 && balance-l[0].price >=0) {
-                    g[partner].cost+=l[0].price;
-                    g[partner].value+=2*l[0].value;
-                }
-                
-                happiness=g[partner].intellect;
-            }
-        }
-    }
-    
-    public void gifting2(girls g[] ,luxury_gifts l[], essential_gift e[],utility_gifts u[],int l1, int e1,int u1,int n) {
-        int j,k,m;
-        if(status==2){
-            for(int i=0;i<n;i++) {
-                if(g[i].partner == name) {
-                    partner = i;
-                }
-            }
-            int balance;
-            if(criteria == 1) {
-                j=0; k=0;
-                balance = g[partner].maintainance_cost;
-                g[partner].cost+=e[j].price;
-                g[partner].value+=e[j].value;
-                g[partner].cost+=l[j].price;
-                g[partner].value+=2*l[j].value;
-                g[partner].cost+=u[j].price;
-                g[partner].value+=u[j].value;
-                balance = balance-e[j].price-l[j].price-u[j].price;
-                    
-                j++;
-                while(balance>0 && j<e1){
-                    g[partner].cost+=e[j].price;
-                    g[partner].value+=e[j].value;
-                    j++;
-                }
-                happiness=balance;
-            }
-            else if (criteria == 2) {
-                j=e1-1;k=l1-1;m=u1-1;
-                balance = this.budget;
-                g[partner].cost+=e[j].price;
-                g[partner].value+=e[j].value;
-                g[partner].cost+=l[k].price;
-                g[partner].value+=2*l[k].value;
-                g[partner].cost+=u[m].price;
-                g[partner].value+=u[m].value;
-                balance = balance-e[j].price-l[k].price-u[m].price;
-                j--;
-                while(balance>0 && j<e1){
-                    g[partner].cost+=e[j].price;
-                    g[partner].value+=e[j].value;
-                    j++;
-                }
-                happiness=find_happiness(g[partner]);
-            }
-            else if(criteria == 3){
-                j=0; k=0;
-                balance = g[partner].maintainance_cost;
-                g[partner].cost+=e[j].price;
-                g[partner].value+=e[j].value;
-                g[partner].cost+=l[j].price;
-                g[partner].value+=2*l[j].value;
-                g[partner].cost+=u[j].price;
-                g[partner].value+=u[j].value;
-                balance = balance-e[j].price-l[j].price-u[j].price;
-                    
-                j++;
-                while(balance>0 && j<e1){
-                    g[partner].cost+=e[j].price;
-                    g[partner].value+=e[j].value;
-                    j++;
-                }
-                happiness=g[partner].intellect;
-            }
-        }
-    }
-    
-    /**
-     * Function to find happiness of the girl
-     * @param g List of girls
-     * @return Happiness of the girl
-     */
-    public int find_happiness( girls g) {
-        if(g.type == 1)
-            g.happiness= (int)Math.log(g.cost);
-        else if(g.type== 2)
-            g.happiness =( g.cost-g.maintainance_cost + g.value);
-        else if (g.type == 3)
-            g.happiness =(int) Math.exp(g.cost);
+    public void gifting1(girls g[] ,luxury_gifts l[], essential_gift e[],utility_gifts u[],int l1, int e1,int u1,int n,int ch,giftselector1 gf1, giftselector2 gf2,giftselect gf) {
         
-        return g.happiness;
+        if(ch==1) {
+            gf1.giftselector(this, g, l, e, u, l1, e1, u1, n);
+        }
+        else {
+            gf2.giftselector(this, g, l, e, u, l1, e1, u1, n);
+        }
     }
-}
+    
+}   
+
