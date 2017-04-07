@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.util.Random;
 
 /**
  *
@@ -22,7 +23,9 @@ public class ques6 {
      */
     public static void main(String args[]) throws IOException {
     
-        int k=Integer.parseInt(args[5]),j,lo,i; //lo=no. of couples
+        int k,j,lo,i; //lo=no. of couples
+        Random rand = new Random();
+        k = rand.nextInt(6)+1;
         int[] commit = new int[1000];
         int[] breakup = new int[k];
         couple[] c = new couple[500];
@@ -31,7 +34,7 @@ public class ques6 {
         utility_gifts[] u = new utility_gifts [100];
         luxury_gifts[] l = new luxury_gifts [100];
         essential_gift[] e = new essential_gift [100];
-        input in = new input(args,g,b,u,l,e,commit,c);
+        input in = new input(g,b,u,l,e,commit,c);
         in.gift(g, b, l, e);//gifting done 1st time
         lo=in.makelist(c, g, b, commit);
         for(int x=0;x<k;x++) {
