@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.util.Random;
 
 /**
  *
@@ -12,17 +13,13 @@ public class ques4 {
     /**
      * Main method which gives most happy and most compatible couple
      * @param args List of arguments
-     * <p>1st input : boy.txt
-     * <p>2nd input : girl.txt
-     * <p>3rd input : essential.txt
-     * <p>4th input : luxury.txt
-     * <p>5th input : utility.txt
-     * <p>6th input : k
      * @throws IOException Gives IO Exception when arguments are wrong
      */
     public static void main(String args[]) throws IOException {
     
-        int k=Integer.parseInt(args[5]),j,lo=0,i; //lo=no. of couples
+        int k,j,lo=0,i; //lo=no. of couples
+        Random rand = new Random();
+        k = rand.nextInt(6)+1;
         int[] commit = new int[1000];
         int[] breakup = new int[k];
         couple[] c = new couple[500];
@@ -31,7 +28,7 @@ public class ques4 {
         utility_gifts[] u = new utility_gifts [100];
         luxury_gifts[] l = new luxury_gifts [100];
         essential_gift[] e = new essential_gift [100];
-        input in = new input(args,g,b,u,l,e,commit,c);
+        input in = new input(g,b,u,l,e,commit,c);
         //to find happiness of the couple
         lo=in.makelist(c, g, b, commit);
         //sort according to happiness
