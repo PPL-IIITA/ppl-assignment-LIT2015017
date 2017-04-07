@@ -26,6 +26,9 @@ public class ques3 {
         couple[] c = new couple[500];
         girls[] g = new girls [1000];
         boys[] b = new boys [1000];
+        miser_boys[] m = new miser_boys[1000];
+        generous_boys[] gb = new generous_boys[1000];
+        geekBoys[] geek = new geekBoys[1000];
         gifts gf1[] = new luxury_gifts[1000];
         gifts[] u = new utility_gifts [100];
         gifts[] e = new essential_gift [100];
