@@ -14,25 +14,25 @@ OS Type : 64 bit<p>
 <p>If 'k' ig greater than the number of couples formed, the couples made will be printed and rest will be null.
 <p>In the given test files, total couples formed are 7.So for testing purposes keep k less than 7.
 If text files provided with the program are used,go to the path "Ques'n'->build->classes" :<p>
-\Ques1\build\classes > java ques1 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques1\build\classes > java ques1
 <p>
-\Ques2\build\classes > java ques2 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques2\build\classes > java ques2
 <p>
-\Ques3\build\classes > java ques3 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques3\build\classes > java ques3
 <p>
-\Ques4\build\classes > java ques4 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if breakup of 5 least happy couple to be done)
+\Ques4\build\classes > java ques4
 <p>
-\Ques5\build\classes > java ques5 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques5\build\classes > java ques5
 <p>
-\Ques6\build\classes > java ques6 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if gifting is performed for 5 days)
+\Ques6\build\classes > java ques6
 <p>
-\Ques7\build\classes > java ques7 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques7\build\classes > java ques7
 <p>
-\Ques8\build\classes > java ques8 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (if 5 happiest couple to be printed)
+\Ques8\build\classes > java ques8
 <p>
-\Ques9\build\classes > java ques9 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (To make couple of 5 best boys and girls)
+\Ques9\build\classes > java ques9
 <p>
-\Ques10\build\classes > java ques10 boy.txt  girl.txt  essential.txt  luxury.txt  utility.txt  5 (To make couple of 5 best boys and girls)
+\Ques10\build\classes > java ques10
 <p>
 
 
