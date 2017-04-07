@@ -13,12 +13,6 @@ public class ques6 {
     /**
      * Main method which gives most happy and most compatible couple
      * @param args List of arguments
-     * <p>1st input : boy.txt
-     * <p>2nd input : girl.txt
-     * <p>3rd input : essential.txt
-     * <p>4th input : luxury.txt
-     * <p>5th input : utility.txt
-     * <p>6th input : No. of days gifting is performed
      * @throws IOException Gives IO Exception when arguments are wrong
      */
     public static void main(String args[]) throws IOException {
