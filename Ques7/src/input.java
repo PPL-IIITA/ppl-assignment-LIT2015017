@@ -21,7 +21,6 @@ public class input {
     int gs,bs,es,us,ls;
     /**
      * Constructor function which initializes the girl,boy and the gift list
-     * @param args Command line argument to accept file names and value of k
      * @param g List of girls
      * @param b List of boys
      * @param u List of utility gifts
@@ -32,12 +31,12 @@ public class input {
      * @throws IOException Gives IO Exception on wrong arguments
      */
     
-    public input(String args[],girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[],couple cs[],couple chash[]) throws IOException{
-        FileInputStream girl = new FileInputStream(args[1]);
-        FileInputStream boy = new FileInputStream(args[0]);
-        FileInputStream utility_gift = new FileInputStream(args[4]);
-        FileInputStream luxury_gift = new FileInputStream(args[3]);
-        FileInputStream essential_gift = new FileInputStream(args[2]);
+    public input(girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[],couple cs[],couple chash[]) throws IOException{
+        FileInputStream girl = new FileInputStream("girl.txt");
+        FileInputStream boy = new FileInputStream("boy.txt");
+        FileInputStream utility_gift = new FileInputStream("utility.txt");
+        FileInputStream luxury_gift = new FileInputStream("luxury.txt");
+        FileInputStream essential_gift = new FileInputStream("essential.txt");
         Scanner s =new Scanner(girl);
         Scanner s2 =new Scanner(boy);
         Scanner s3 = new Scanner(essential_gift);

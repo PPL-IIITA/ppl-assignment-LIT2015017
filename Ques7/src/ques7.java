@@ -14,11 +14,6 @@ public class ques7 {
      * Main method which gives the girlfriend of boys given in the list
      * <p>Generates a random number 'n' and randomly picks 'n' boys whose girlfriend have to be found
      * @param args List of arguments
-     * <p>1st input : boy.txt
-     * <p>2nd input : girl.txt
-     * <p>3rd input : essential.txt
-     * <p>4th input : luxury.txt
-     * <p>5th input : utility.txt
      * @throws IOException Gives IO Exception when arguments are wrong
      */
     public static void main(String args[]) throws IOException {
@@ -35,7 +30,7 @@ public class ques7 {
         essential_gift[] e = new essential_gift [100];
         String[] s = new String[100];
         search_print sp = new search_print();
-        input in = new input(args,g,b,u,l,e,commit,c,cs,chash);
+        input in = new input(g,b,u,l,e,commit,c,cs,chash);
         
         lo=in.makelist1(c, g, b, commit);
         in.makelist2(c,cs,lo);
