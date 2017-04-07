@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.util.Random;
 
 
 /**
@@ -23,7 +24,9 @@ public class ques10 {
      */
     public static void main(String args[]) throws IOException {
     
-        int k=Integer.parseInt(args[5]),j,lo=0,x,y,w,z;
+        int k,j,lo=0,x,y,w,z;
+        Random rand = new Random();
+        k = rand.nextInt(6)+1;
         int[] commit = new int[1000];
         int[] ar = new int[1000];
         couple[] c = new couple[500];
@@ -33,7 +36,7 @@ public class ques10 {
         luxury_gifts[] l = new luxury_gifts [100];
         essential_gift[] e = new essential_gift [100];
         random_k bk = new random_k();
-        input in = new input(args,g,b,u,l,e,commit,c,k);
+        input in = new input(g,b,u,l,e,commit,c,k);
         System.out.println("List of girls generated randomly :");
         for(int i=0;i<k;) {
             x=in.makearr1(b,k,ar,bk);
