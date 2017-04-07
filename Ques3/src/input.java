@@ -21,7 +21,6 @@ public class input {
     int gs,bs,es,us,ls;
     /**
      * Constructor function which initializes the girl,boy and the gift list
-     * @param args Command line argument to accept file names and value of k
      * @param g List of girls
      * @param b List of boys
      * @param u List of utility gifts
