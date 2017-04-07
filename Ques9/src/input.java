@@ -21,7 +21,6 @@ public class input {
     int gs,bs,es,us,ls;
     /**
      * Constructor function which initializes the girl,boy and the gift list
-     * @param args Command line argument to accept file names and value of k
      * @param g List of girls
      * @param b List of boys
      * @param u List of utility gifts
@@ -32,12 +31,24 @@ public class input {
      * @throws IOException Gives IO Exception on wrong arguments
      */
     
-    public input(String args[],girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[],int k) throws IOException{
-        FileInputStream girl = new FileInputStream(args[1]);
-        FileInputStream boy = new FileInputStream(args[0]);
-        FileInputStream utility_gift = new FileInputStream(args[4]);
-        FileInputStream luxury_gift = new FileInputStream(args[3]);
-        FileInputStream essential_gift = new FileInputStream(args[2]);
+    /**
+     * Constructor function which initializes the girl,boy and the gift list
+     * @param g List of girls
+     * @param b List of boys
+     * @param u List of utility gifts
+     * @param l List of luxury gifts
+     * @param e List of essential gifts
+     * @param commit Array to store the mapping of committed boys and girls
+     * @param c List of couples made
+     * @param k Top k valued items
+     * @throws IOException Gives IO Exception on wrong arguments
+     */
+    public input(girls g[],boys b[],utility_gifts u[],luxury_gifts l[], essential_gift e[],int commit[], couple c[],int k) throws IOException{
+        FileInputStream girl = new FileInputStream("girl.txt");
+        FileInputStream boy = new FileInputStream("boy.txt");
+        FileInputStream utility_gift = new FileInputStream("utility.txt");
+        FileInputStream luxury_gift = new FileInputStream("luxury.txt");
+        FileInputStream essential_gift = new FileInputStream("essential.txt");
         Scanner s =new Scanner(girl);
         Scanner s2 =new Scanner(boy);
         Scanner s3 = new Scanner(essential_gift);
@@ -125,7 +136,7 @@ public class input {
      * @param l List of luxury gifts
      * @param e List of essential gifts
      * @param c List of couples
-     * @throws IOException 
+     * @throws IOException Gives IO Exception for file
      */
     public void pair(girls g[],boys b[],int commit[],int k,luxury_gifts l[],essential_gift e[],couple c[]) throws IOException {
         File file = new File("coupledata.txt");

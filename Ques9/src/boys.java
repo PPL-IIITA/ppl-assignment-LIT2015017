@@ -44,6 +44,7 @@ public class boys {
      * @param l1 No. of luxury gifts
      * @param e1 No. of essential gifts
      * @param n Total no. of girls
+     * @param x Top k valued items
      */
     public void gifting(girls g[] ,luxury_gifts l[], essential_gift e[],int l1, int e1,int n,int x) {
         int j,k;
