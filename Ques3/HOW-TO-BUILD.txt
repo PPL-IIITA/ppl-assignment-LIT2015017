@@ -1,4 +1,7 @@
-The project can be built using ANT on either Windows10 or Ubuntu16.04LTS.
+Software used: apache-ant-1.10.1
+OS used: Windows10
+
+The project can be built using ANT on Windows10.
 
 In the command prompt, change the current directory to:
 ppl-assignment-LIT2015017/Ques3
