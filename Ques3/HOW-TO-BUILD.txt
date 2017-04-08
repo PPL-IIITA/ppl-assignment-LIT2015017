@@ -1,0 +1,9 @@
+The project can be built using ANT on either Windows10 or Ubuntu16.04LTS.
+
+In the command prompt, change the current directory to:
+ppl-assignment-LIT2015017/Ques3
+
+Create a folder "classes" if not already present and copy the text files "girl.txt", "boy.txt", "essential.txt", "utility.txt", "luxury.txt".
+A copy of these text files should also be present in the directory "Ques3". 
+
+The build.xml file is given in the folder. Just type "ant" in the command prompt.The .class files of all the java files will be built in the folder "classes".
