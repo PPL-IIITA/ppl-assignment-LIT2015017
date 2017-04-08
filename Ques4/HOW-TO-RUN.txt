@@ -1,0 +1,8 @@
+Set the current working directory path to the path where the project is present.
+Change the path to Ques4/classes
+
+Now on the command prompt, type:
+
+java ques4
+
+So, the command is "cd Ques4/classes java ques3"
