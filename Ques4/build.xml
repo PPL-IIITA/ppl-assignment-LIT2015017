@@ -33,5 +33,16 @@
       </java>
 
    </target>
+<target name="javadocs" description="Generate JavaDoc API docs">
+
+        <delete dir="docs" failonerror="false" />
+
+        <mkdir dir="docs" />
+
+        <javadoc destdir="docs">
+
+ <fileset dir="."/>
+        </javadoc>
+    </target>
 
 </project>
