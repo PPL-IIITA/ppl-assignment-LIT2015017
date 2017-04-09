@@ -35,7 +35,7 @@ If text files provided with the program are used,go to the path "Ques'n'->classe
 <p>
 \Ques9\classes > java ques9
 <p>
-\Ques10\\classes > java ques10
+\Ques10\classes > java ques10
 <p>
 
 
